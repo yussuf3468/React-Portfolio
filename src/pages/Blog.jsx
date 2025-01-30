@@ -39,10 +39,11 @@ const Blog = () => {
               </div>
               <Link
                 to={`/blog/${post.id}`}
-                className="block mt-4 text-cyan-500 hover:underline font-medium"
+                className="block mt-4 text-cyan-500 hover:underline font-medium transition duration-200"
               >
                 Read More →
               </Link>
+
             </div>
           </motion.div>
         ))}

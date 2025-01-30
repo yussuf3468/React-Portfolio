@@ -7,6 +7,8 @@ import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
 import Blog from "./pages/Blog";
+import BlogDetails from "./components/BlogDetails";
+import Cv from "./components/Cv";
 
 function App() {
   // Load dark mode preference from localStorage
@@ -34,7 +36,9 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects darkMode={darkMode} />} />
           <Route path="/blog" element={<Blog />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/blog/:id" element={<BlogDetails />} />
+          <Route path="/contact" element={<Contact darkMode={darkMode} />} />
+          <Route path="/cv" element={<Cv darkMode={darkMode} />} />
         </Routes>
         <Footer />
       </div>

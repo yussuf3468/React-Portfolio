@@ -97,7 +97,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {  // ✅ Receive props from App.j
             darkMode ? "bg-gray-900 text-white" : "bg-white text-black"
           }`}
         >
-          {["Home", "Projects", "About", "Contact"].map((item, index) => (
+          {["Home", "Projects", "Blog", "About", "Contact"].map((item, index) => (
             <Link key={index} to={`/${item.toLowerCase()}`} className="text-lg">
               {item}
             </Link>
