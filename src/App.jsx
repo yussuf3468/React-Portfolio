@@ -1,44 +1,43 @@
 import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
 import Home from "./pages/Home";
-import Projects from "./pages/Projects";
 import About from "./pages/About";
+import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
+import Footer from "./components/Footer";
+import Blog from "./pages/Blog";
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  // Load dark mode preference from localStorage
+  const [darkMode, setDarkMode] = useState(() => {
+    return localStorage.getItem("theme") === "dark";
+  });
 
-  // Set dark mode based on localStorage or default to false
+  // Apply dark mode class and update localStorage
   useEffect(() => {
-    const savedMode = localStorage.getItem('darkMode') === 'true';
-    setDarkMode(savedMode);
-  }, []);
-
-  useEffect(() => {
-    // Apply dark mode class to the root element
     if (darkMode) {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('darkMode', 'true');
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
     } else {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('darkMode', 'false');
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
     }
   }, [darkMode]);
 
   return (
     <Router>
-      {/* <div className="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white min-h-screen"> */}
-        <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+      <div className={darkMode ? "dark bg-gray-900 text-white" : "bg-white text-black"}>
+        <Navbar darkMode={darkMode} setDarkMode={setDarkMode} /> {/* ✅ Pass as props */}
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<Projects />} />
+          <Route path="/" element={<Home darkMode={darkMode} />} />
           <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects darkMode={darkMode} />} />
+          <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
-      {/* </div> */}
+      </div>
     </Router>
   );
 }

@@ -1,14 +1,19 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const ProjectCard = ({ title, description, image, link }) => {
+const ProjectCard = ({ title, description, image, link, darkMode }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
       whileHover={{ scale: 1.05 }}
-      className="bg-white/80 backdrop-blur-lg border border-gray-200 shadow-lg rounded-2xl p-6 flex flex-col items-center text-center max-w-sm transition-transform"
+      className={`backdrop-blur-lg border shadow-lg rounded-2xl p-6 flex flex-col items-center text-center max-w-sm transition-transform 
+        ${
+          darkMode
+            ? "bg-gray-800 border-gray-700 text-white"
+            : "bg-white/80 border-gray-200 text-gray-800"
+        }`}
     >
       {/* Project Image */}
       <img
@@ -18,10 +23,10 @@ const ProjectCard = ({ title, description, image, link }) => {
       />
 
       {/* Title */}
-      <h3 className="mt-4 text-xl font-semibold text-gray-800">{title}</h3>
+      <h3 className="mt-4 text-xl font-semibold">{title}</h3>
 
       {/* Description */}
-      <p className="mt-2 text-sm text-gray-600">{description}</p>
+      <p className="mt-2 text-sm">{description}</p>
 
       {/* Link Button */}
       {link && (
@@ -29,7 +34,12 @@ const ProjectCard = ({ title, description, image, link }) => {
           href={link}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-4 px-4 py-2 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition"
+          className={`mt-4 px-4 py-2 rounded-lg transition 
+            ${
+              darkMode
+                ? "bg-cyan-600 text-white hover:bg-cyan-700"
+                : "bg-cyan-500 text-white hover:bg-cyan-600"
+            }`}
         >
           View Project
         </a>
