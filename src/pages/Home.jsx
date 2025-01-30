@@ -88,7 +88,7 @@ const HomePage = ({ darkMode }) => {
   return (
     <div ref={containerRef} className={`min-h-screen transition-all duration-500 ${darkMode ? 'dark' : ''}`}>
       {/* Hero Section */}
-      <section className="flex flex-col md:flex-row items-center justify-between min-h-screen px-8 md:px-20 pt-20 lg:pt-24 transition-all duration-500 dark:bg-gray-900 dark:text-white">
+      <section className="flex flex-col md:flex-row items-center justify-between min-h-screen px-8 md:px-20 pt-20 lg:pt-24 mt-10 sm:mt-20 md:mt-0 transition-all duration-500 dark:bg-gray-900 dark:text-white">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
