@@ -14,13 +14,25 @@ const Navbar = () => {
       transition={{ duration: 0.5 }}
       className="fixed w-full top-0 z-50 backdrop-blur-lg bg-white/10 px-6 py-4 flex justify-between items-center shadow-lg"
     >
-      <Link to="/" className="text-2xl font-bold text-gray-900 tracking-wider">
-        <motion.span whileHover={{ scale: 1.1 }} transition={{ type: "spring", stiffness: 300 }}>Yussuf Muse</motion.span>
+      <Link to="/" className="text-2xl font-bold tracking-wider relative">
+        <motion.span
+          whileHover={{ scale: 1.1 }}
+          transition={{ type: "spring", stiffness: 300 }}
+          className="bg-gradient-to-r from-cyan-400 to-purple-500 text-transparent bg-clip-text 
+               drop-shadow-[0_0_10px_rgba(56,189,248,0.8)] hover:drop-shadow-[0_0_20px_rgba(192,132,252,1)]"
+        >
+          Yussuf Muse
+        </motion.span>
       </Link>
 
+
       <div className="hidden md:flex space-x-6 text-lg">
-        {['Home', 'Projects', 'About', 'Contact'].map((item, index) => (
-          <Link key={index} to={`/${item.toLowerCase()}`} className="relative group text-gray-800">
+        {['Home', 'Projects', 'About', 'Blog', 'Contact'].map((item, index) => (
+          <Link
+            key={index}
+            to={item === "Home" ? "/" : `/${item.toLowerCase()}`} // 👈 Check if it's "Home"
+            className="relative group text-gray-800"
+          >
             <motion.span whileHover={{ scale: 1.1 }} transition={{ type: "spring", stiffness: 300 }}>
               {item}
             </motion.span>
@@ -29,15 +41,16 @@ const Navbar = () => {
         ))}
       </div>
 
+
       <div className="flex items-center space-x-4">
         {/* Download CV Button */}
         <a href="/cv" className="px-2 py-2 text-lg bg-gray-800 text-white rounded-lg">
           Download CV
         </a>
-      {/* Contact Button visible on larger screens */}
-      <a href="/contact" className="hidden md:inline-block px-6 py-2 text-lg bg-cyan-400 text-white rounded-lg">
-        Contact
-      </a>
+        {/* Contact Button visible on larger screens */}
+        <a href="/contact" className="hidden md:inline-block px-6 py-2 text-lg bg-cyan-400 text-white rounded-lg">
+          Contact
+        </a>
 
         {/* Dark Mode Toggle */}
         <button onClick={() => setDarkMode(!darkMode)} className="p-2 rounded-full bg-gray-200 dark:bg-gray-800">

@@ -4,7 +4,7 @@ import myImage from "../assets/images/myphoto.jpg";
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-white px-6 md:px-20 py-16">
+    <div className="min-h-screen bg-gray-100 pt-20 text-gray-900 dark:bg-gray-500 dark:text-white px-6 md:px-20 py-16">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}

@@ -8,7 +8,6 @@ import ProjectCard from "../components/ProjectCard";
 const techStack = [
   "JavaScript",
   "React.js",
-  "Next.js",
   "Node.js",
   "Express",
   "MongoDB",
@@ -18,15 +17,21 @@ const techStack = [
 
 const projects = [
   {
+    title: "Odyssey Travel",
+    description: "A travel booking platform offering seamless trip planning.",
+    image: "https://via.placeholder.com/300",
+    link: "#",
+  },
+  {
     title: "East Africa Horizons",
     description: "A travel blog showcasing East Africa's beauty.",
-    image: "https://via.placeholder.com/300", // Replace with actual image
+    image: "https://via.placeholder.com/300",
     link: "#",
   },
   {
     title: "Feastify",
     description: "A food delivery app connecting users to restaurants.",
-    image: "https://via.placeholder.com/300", // Replace with actual image
+    image: "https://via.placeholder.com/300",
     link: "#",
   },
 ];
@@ -135,12 +140,15 @@ const HomePage = () => {
 
       {/* Call to Action */}
       <section className="py-16 text-center">
-        <h2 className="text-3xl font-bold text-cyan-500 mb-6">Let's Work Together</h2>
-        <p className="text-lg text-gray-600 mb-6">
-          Ready to collaborate on exciting projects? Let's build something amazing.
-        </p>
-        {/* <Button className="px-6 py-3 bg-black text-white">Get In Touch</Button> */}
-      </section>
+  <h2 className="text-3xl font-bold text-cyan-500 mb-6">Let's Work Together</h2>
+  <p className="text-lg text-gray-600 mb-6">
+    Ready to collaborate on exciting projects? Let's build something amazing.
+  </p>
+  <div className="flex justify-center">
+    <Button className="px-6 py-3 bg-black text-white">Get In Touch</Button>
+  </div>
+</section>
+
     </div>
   );
 };

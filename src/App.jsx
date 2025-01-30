@@ -29,7 +29,7 @@ function App() {
 
   return (
     <Router>
-      <div className="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white min-h-screen">
+      {/* <div className="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white min-h-screen"> */}
         <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -38,7 +38,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
-      </div>
+      {/* </div> */}
     </Router>
   );
 }
