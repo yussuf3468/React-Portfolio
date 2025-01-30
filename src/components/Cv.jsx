@@ -117,7 +117,7 @@ const Cv = () => {
         <motion.div
             initial="initial"
             animate="animate"
-            className="min-h-screen mt-4 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 p-8 md:p-12 lg:p-16"
+            className="min-h-screen mt-10 md:mt-4 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 p-8 md:p-12 lg:p-16"
         >
             <div className="max-w-6xl mx-auto">
                 {/* CV Content */}

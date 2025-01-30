@@ -6,14 +6,19 @@ import { Moon, Sun } from "lucide-react";
 const Navbar = ({ darkMode, setDarkMode }) => {  // ✅ Receive props from App.jsx
   const [isOpen, setIsOpen] = useState(false);
 
+  // Function to close mobile menu
+  const closeMobileMenu = () => {
+    setIsOpen(false);
+  };
+
+
   return (
     <motion.nav
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className={`fixed w-full top-0 z-50 backdrop-blur-lg px-6 py-4 flex justify-between items-center shadow-lg transition-all ${
-        darkMode ? "bg-gray-900 text-white" : "bg-white text-black"
-      }`}
+      className={`fixed w-full top-0 z-50 backdrop-blur-lg px-6 py-4 flex justify-between items-center shadow-lg transition-all ${darkMode ? "bg-gray-900 text-white" : "bg-white text-black"
+        }`}
     >
       <Link to="/" className="text-2xl font-bold tracking-wider relative">
         <motion.span
@@ -31,9 +36,8 @@ const Navbar = ({ darkMode, setDarkMode }) => {  // ✅ Receive props from App.j
           <Link
             key={index}
             to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-            className={`relative group ${
-              darkMode ? "text-white" : "text-gray-800"
-            }`}
+            className={`relative group ${darkMode ? "text-white" : "text-gray-800"
+              }`}
           >
             <motion.span
               whileHover={{ scale: 1.1 }}
@@ -50,13 +54,11 @@ const Navbar = ({ darkMode, setDarkMode }) => {  // ✅ Receive props from App.j
         {/* Download CV Button */}
         <a
           href="/cv"
-          className={`px-2 py-2 text-lg rounded-lg ${
-            darkMode ? "bg-white text-black" : "bg-gray-800 text-white"
-          }`}
+          className={`px-[2px] sm:px-2 py-2 text-sm sm:text-base md:text-lg rounded-lg ${darkMode ? "bg-white text-black" : "bg-gray-800 text-white"
+            }`}
         >
           Download CV
         </a>
-
         {/* Contact Button visible on larger screens */}
         <a
           href="/contact"
@@ -98,13 +100,19 @@ const Navbar = ({ darkMode, setDarkMode }) => {  // ✅ Receive props from App.j
           }`}
         >
           {["Home", "Projects", "Blog", "About", "Contact"].map((item, index) => (
-            <Link key={index} to={`/${item.toLowerCase()}`} className="text-lg">
+            <Link 
+              key={index} 
+              to={item === "Home" ? "/" : `/${item.toLowerCase()}`} 
+              className="text-lg"
+              onClick={closeMobileMenu} // Add this
+            >
               {item}
             </Link>
           ))}
           <a
             href="/contact"
             className="px-6 py-2 text-lg bg-cyan-400 text-white rounded-lg md:hidden"
+            onClick={closeMobileMenu} // Add this
           >
             Contact
           </a>
