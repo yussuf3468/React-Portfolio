@@ -17,8 +17,9 @@ const Navbar = ({ darkMode, setDarkMode }) => {  // ✅ Receive props from App.j
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className={`fixed w-full top-0 z-50 backdrop-blur-lg px-6 py-4 flex justify-between items-center shadow-lg transition-all ${darkMode ? "bg-gray-900 text-white" : "bg-white text-black"
+      className={`fixed w-full top-0 z-50 backdrop-blur-lg px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center shadow-lg transition-all ${darkMode ? "bg-gray-900 text-white" : "bg-white text-black"
         }`}
+
     >
       <Link to="/" className="text-2xl font-bold tracking-wider relative">
         <motion.span
@@ -95,14 +96,13 @@ const Navbar = ({ darkMode, setDarkMode }) => {  // ✅ Receive props from App.j
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className={`absolute top-16 left-0 w-full shadow-lg flex flex-col items-center space-y-4 py-6 md:hidden ${
-            darkMode ? "bg-gray-900 text-white" : "bg-white text-black"
-          }`}
+          className={`absolute top-16 left-0 w-full shadow-lg flex flex-col items-center space-y-4 py-6 md:hidden ${darkMode ? "bg-gray-900 text-white" : "bg-white text-black"
+            }`}
         >
-          {["Home", "Projects", "Blog", "About", "Contact"].map((item, index) => (
-            <Link 
-              key={index} 
-              to={item === "Home" ? "/" : `/${item.toLowerCase()}`} 
+          {["Home", "Projects", "Blog", "About"].map((item, index) => (
+            <Link
+              key={index}
+              to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
               className="text-lg"
               onClick={closeMobileMenu} // Add this
             >
