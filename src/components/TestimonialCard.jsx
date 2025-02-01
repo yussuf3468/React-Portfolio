@@ -18,11 +18,14 @@ const TestimonialCard = ({ name, review, image, darkMode }) => {
       <motion.img
         src={image}
         alt={name}
-        className={`w-20 h-20 rounded-full object-cover border-4 shadow-md 
-          ${darkMode ? "border-cyan-400" : "border-cyan-500"}`}
-        whileHover={{ scale: 1.1 }}
+        className={`w-28 h-28 rounded-full object-cover border-4 shadow-lg 
+    ${darkMode ? "border-cyan-400" : "border-cyan-500"}`}
+        whileHover={{ scale: 1.1 }} // Increases size on hover
         transition={{ duration: 0.3 }}
       />
+
+
+
 
       {/* Name */}
       <h3 className="mt-4 text-lg font-bold">{name}</h3>

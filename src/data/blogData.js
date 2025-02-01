@@ -6,10 +6,48 @@ import JS from "../assets/images/JS.png";
 import Vercel from "../assets/images/Vercel.png";
 import Hook from "../assets/images/hooks.png";
 import VSCode from "../assets/images/VSCode.png";
+import Chemist from '../assets/images/Chemist.png'
+import Ecommerce from '../assets/images/Ecommerce.png'
+import Skyline from '../assets/images/Skyline.png'
+import TaskManager from '../assets/images/Skyline.png'
+import Portfolio from '../assets/images/Portfolio.png'
+import EastAfricaHorizons from '../assets/images/EastAfricaHorizons.png'
 
 const blogPosts = [
+  {
+    id: 1,
+    title: "Complete workthrough of my odyssey travel blog",
+    summary: "A detailed guide on how I built my travel blog using React, Tailwind CSS, and Framer Motion.",
+    date: "Feb 15, 2025",
+    readTime: "8 min read",
+    image: Odyssey,
+    content: `
+      <h2>Building My Travel Blog</h2>
+      <p>My travel blog was created with <strong>React</strong>, <strong>Tailwind CSS</strong>, and <strong>Framer Motion</strong> for animations.</p>
+      
+      <h2>Challenges & Solutions</h2>
+      <h3>1. Responsive Design with scss</h3>
+      <p>Using SCSS, I created a responsive layout that adapts to different screen sizes for a seamless user experience.</p>
+      
+      <h3>2. Page Transitions</h3>
+      <p>Framer Motion allowed me to create smooth page transitions and animations for a better user experience.</p>
+      
+      <h3>3. User authentication with jwt</h3>
+      <p>JWT authentication was implemented to secure user data and provide a personalized experience for visitors.</p>
+
+      <h3>4. Dynamic Routing</h3>
+      <p>Dynamic routing was used to create SEO-friendly URLs for blog posts and improve search engine visibility.</p>
+
+      <h2>Lessons Learned</h2>
+      <p>Building my travel blog taught me the importance of <strong>performance optimization</strong> and <strong>user experience design</strong>.</p>
+      
+
+      <h2>Future Plans</h2>
+      <p>I plan to add more features like user authentication, a comment system, and dynamic routing for blog posts.</p>
+    `,
+  },
     {
-        id: 1,
+        id: 2,
         title: "SCSS vs Tailwind CSS",
         summary: "A step-by-step guide on how to build a full-stack travel blog using the MERN stack.",
         date: "Jan 29, 2025",
@@ -309,5 +347,72 @@ export default function useDarkMode() {
         `,
     }
 ];
-
 export default blogPosts;
+
+const projects = [
+  {
+    id: 1,
+    image: Odyssey,
+    title: "🌍 Odyssey Travel (Full-Stack Web Application)",
+    tech: "React, Node.js, Express.js, MongoDB, Multer, JWT Authentication",
+    type: "Full-Stack Web Application",
+    description:
+      "A travel platform with user authentication, media uploads, and dynamic interactions.",
+  },
+  {
+    id: 2,
+    image: Chemist,
+    title: "🧪 Chemist Website",
+    tech: "HTML, CSS",
+    type: "Beginner Project",
+    description:
+      "A static website designed for a pharmacy, helping me understand HTML structuring and CSS styling.",
+  },
+  {
+    id: 3,
+    image: Ecommerce,
+    title: "🛒 E-Commerce Application",
+    tech: "React, Node.js, Express.js, MongoDB",
+    type: "Full-Stack Web Application",
+    description:
+      "An online shopping platform with a shopping cart, product search, and total price calculation.",
+  },
+  {
+    id: 4,
+    image: Skyline,
+    title: "🏡 Skyline Estates (Real Estate Website)",
+    tech: "HTML, CSS",
+    type: "Static Website",
+    description:
+      "A simple real estate website showcasing property listings and a contact form for inquiries.",
+  },
+  {
+    id: 5,
+    image: Portfolio,
+    title: "💼 Portfolio Website",
+    tech: "React, Tailwind CSS, Framer Motion",
+    type: "Personal Website",
+    description:
+    "My personal portfolio website featuring smooth animations, responsive design, and interactive elements.",
+  },
+  {
+    id: 6,
+    image: EastAfricaHorizons,
+    title: "🌍 East Africa Horizons (Travel Blog)",
+    tech: "React, Tailwind CSS, Framer Motion",
+    type: "Front-End Project",
+    description:
+    "A travel blog showcasing the beauty of East Africa with smooth page transitions and a clean UI.",
+  },
+  {
+    id: 7,
+    image: TaskManager,
+    title: "📋 Task Manager App",
+    tech: "React, Firebase, Tailwind CSS",
+    type: "Web Application",
+    description:
+      "A productivity tool allowing users to add, edit, and delete tasks with drag-and-drop functionality.",
+  },
+];
+
+export { projects };

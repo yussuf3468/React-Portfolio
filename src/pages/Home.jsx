@@ -4,10 +4,10 @@ import myImage from "../assets/images/myphoto.jpg";
 import Button from "../components/Button";
 import TestimonialCard from "../components/TestimonialCard";
 import ProjectCard from "../components/ProjectCard";
-import Odyssey from '../assets/images/OdysseyTravel (1).png'
-import EastAfricaHorizons from '../assets/images/EastAfricaHorizons.png'
-import Feastify from '../assets/images/Chemist.png'
 import { Link } from "react-router-dom";
+import { projects } from "../data/blogData";
+import abdimaliPhoto from '../assets/images/abdimalikPhoto.jpg';
+import mohamedPhoto from '../assets/images/mohamedPhoto.jpg';
 
 const techStack = [
   "JavaScript",
@@ -19,27 +19,6 @@ const techStack = [
   "Framer Motion",
 ];
 
-const projects = [
-  {
-    title: "Odyssey Travel",
-    description: "A travel booking platform offering seamless trip planning.",
-    image: Odyssey,
-    link: "#",
-  },
-  {
-    title: "East Africa Horizons",
-    description: "A travel blog showcasing East Africa's beauty.",
-    image: EastAfricaHorizons,
-    link: "#",
-  },
-  {
-    title: "Feastify",
-    description: "A food delivery app connecting users to restaurants.",
-    image: Feastify,
-    link: "#",
-  },
-];
-
 const testimonials = [
   {
     name: "Alice Johnson",
@@ -47,14 +26,14 @@ const testimonials = [
     image: myImage,
   },
   {
-    name: "James Smith",
+    name: "Abdimali Mohamed",
     review: "Working with Yussuf was a pleasure! His skills in React and Node.js are top-notch.",
-    image: myImage,
+    image: abdimaliPhoto,
   },
   {
-    name: "Sophia Lee",
+    name: "Mohamed Hassan",
     review: "Professional, efficient, and innovative. Yussuf delivers high-quality work every time.",
-    image: myImage,
+    image: mohamedPhoto,
   },
 ];
 
@@ -96,29 +75,30 @@ const HomePage = ({ darkMode }) => {
           className="max-w-lg mb-8 md:mb-0"
           style={{ y: yHeading }}
         >
-          <h1 className="text-3xl md:text-4xl font-bold mb-4">
-            Yussuf Muse - Full-Stack Developer & Innovator
+          <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+            Building Smart, Scalable & Innovative Web Experiences 🚀
           </h1>
-          <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 mb-6">
-            I am a passionate Full-Stack Developer with a knack for creating seamless user experiences.
-            My expertise spans across front-end and back-end technologies, enabling me to bring ideas to life.
+          <p className="text-lg text-gray-600 dark:text-gray-300 mt-4">
+            I'm a Full-Stack Developer passionate about creating seamless, high-performance applications
+            using React, Node.js, and the latest web technologies.
           </p>
-          <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 mb-6">
-            I have extensive experience in working with modern web development frameworks and tools like React, Node.js, and more.
-            I thrive on solving complex problems and continuously improving my skills to stay updated with the latest industry trends.
+          <p className="text-lg text-gray-600 dark:text-gray-300 mt-2">
+            With a strong focus on efficiency and user experience, I bring ideas to life through clean, scalable,
+            and future-proof code.
           </p>
-          <div className="flex gap-4">
-            <Link to="/about">
-              <Button className="px-6 py-3 bg-black text-white dark:bg-white dark:text-black">
-                Explore
+          <div className="flex gap-4 mt-6">
+            <Link to="/projects">
+              <Button className="px-4 py-3 bg-black text-white dark:bg-white dark:text-black">
+                View My Work
               </Button>
             </Link>
             <Link to="/contact">
-              <Button highlight={true} className="px-6 py-3 text-black dark:text-white dark:border dark:border-white">
-                Contact
+              <Button highlight={true} className="px-6 py-3 text-black dark:text-white border">
+                Hire Me
               </Button>
             </Link>
           </div>
+
         </motion.div>
 
         <motion.div
@@ -165,11 +145,12 @@ const HomePage = ({ darkMode }) => {
       <section className="py-16 text-center">
         <h2 className="text-3xl font-bold text-cyan-500 mb-6">Featured Projects</h2>
         <div className="flex flex-wrap justify-center gap-6">
-          {projects.map((project, index) => (
+          {projects.slice(0, 3).map((project, index) => (
             <ProjectCard key={index} {...project} darkMode={darkMode} />
           ))}
         </div>
       </section>
+
 
       {/* Testimonials Section */}
       <section className="py-16 bg-gray-100 dark:bg-gray-800 text-center">

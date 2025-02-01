@@ -40,9 +40,9 @@ const Contact = ({ darkMode }) => {
             className={`p-8 rounded-2xl ${darkMode ? 'bg-gray-800' : 'bg-gray-50'}`}
           >
             <div className="mb-8">
-              <img 
-                src={myImage} 
-                alt="Yussuf Muse" 
+              <img
+                src={myImage}
+                alt="Yussuf Muse"
                 className="w-32 h-32 rounded-full object-cover mx-auto mb-6"
               />
               <p className={`text-lg mb-6 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
@@ -59,13 +59,13 @@ const Contact = ({ darkMode }) => {
                 <div className="flex items-center gap-3 mb-2">
                   <AiOutlinePhone className={`w-5 h-5 ${darkMode ? 'text-cyan-400' : 'text-cyan-600'}`} />
                   <a href="tel:+254712345678" className={`hover:text-cyan-600 transition-colors ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                    +254 712 345 678
+                    +254 769 484 646
                   </a>
                 </div>
                 <div className="flex items-center gap-3">
                   <AiOutlineMail className={`w-5 h-5 ${darkMode ? 'text-cyan-400' : 'text-cyan-600'}`} />
                   <span className={`${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                    hello@yussufmuse.com
+                    yussufh080@gmail.com
                   </span>
                 </div>
               </div>
@@ -75,13 +75,24 @@ const Contact = ({ darkMode }) => {
                   Let's Connect
                 </h3>
                 <div className="flex gap-4 justify-start">
-                  <a href="#" className={`p-2 rounded-lg hover:bg-cyan-100 transition-colors ${darkMode ? 'hover:bg-gray-700' : ''}`}>
+                  <a
+                    href="https://www.linkedin.com/in/yussuf-h-muse-a10362336"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`p-2 rounded-lg hover:bg-cyan-100 transition-colors ${darkMode ? 'hover:bg-gray-700' : ''}`}
+                  >
                     <AiOutlineLinkedin className={`w-6 h-6 ${darkMode ? 'text-cyan-400' : 'text-cyan-600'}`} />
                   </a>
-                  <a href="#" className={`p-2 rounded-lg hover:bg-cyan-100 transition-colors ${darkMode ? 'hover:bg-gray-700' : ''}`}>
+                  <a
+                    href="https://github.com/yussuf3468"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`p-2 rounded-lg hover:bg-cyan-100 transition-colors ${darkMode ? 'hover:bg-gray-700' : ''}`}
+                  >
                     <AiOutlineGithub className={`w-6 h-6 ${darkMode ? 'text-cyan-400' : 'text-cyan-600'}`} />
                   </a>
                 </div>
+
               </div>
 
               <div className={`mt-8 p-4 rounded-lg ${darkMode ? 'bg-gray-700' : 'bg-white'}`}>
@@ -89,7 +100,7 @@ const Contact = ({ darkMode }) => {
                   Availability
                 </h4>
                 <p className={`text-sm ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                  I'm currently open to collaboration opportunities and new projects. 
+                  I'm currently open to collaboration opportunities and new projects.
                   Based in Nairobi, Kenya (UTC+3).
                 </p>
               </div>
@@ -110,11 +121,10 @@ const Contact = ({ darkMode }) => {
                   id="name"
                   type="text"
                   name="name"
-                  className={`w-full px-4 py-3 rounded-lg border focus:ring-2 focus:outline-none transition-all ${
-                    darkMode 
-                      ? 'bg-gray-700 border-gray-600 focus:border-cyan-400 focus:ring-cyan-400/20' 
+                  className={`w-full px-4 py-3 rounded-lg border focus:ring-2 focus:outline-none transition-all ${darkMode
+                      ? 'bg-gray-700 border-gray-600 focus:border-cyan-400 focus:ring-cyan-400/20'
                       : 'border-gray-300 focus:border-cyan-500 focus:ring-cyan-500/20'
-                  }`}
+                    }`}
                   placeholder="Your Name"
                   required
                 />
@@ -128,11 +138,10 @@ const Contact = ({ darkMode }) => {
                   id="email"
                   type="email"
                   name="email"
-                  className={`w-full px-4 py-3 rounded-lg border focus:ring-2 focus:outline-none transition-all ${
-                    darkMode 
-                      ? 'bg-gray-700 border-gray-600 focus:border-cyan-400 focus:ring-cyan-400/20' 
+                  className={`w-full px-4 py-3 rounded-lg border focus:ring-2 focus:outline-none transition-all ${darkMode
+                      ? 'bg-gray-700 border-gray-600 focus:border-cyan-400 focus:ring-cyan-400/20'
                       : 'border-gray-300 focus:border-cyan-500 focus:ring-cyan-500/20'
-                  }`}
+                    }`}
                   placeholder="your.email@example.com"
                   required
                 />
@@ -146,11 +155,10 @@ const Contact = ({ darkMode }) => {
                   id="message"
                   name="message"
                   rows="5"
-                  className={`w-full px-4 py-3 rounded-lg border focus:ring-2 focus:outline-none transition-all ${
-                    darkMode 
-                      ? 'bg-gray-700 border-gray-600 focus:border-cyan-400 focus:ring-cyan-400/20' 
+                  className={`w-full px-4 py-3 rounded-lg border focus:ring-2 focus:outline-none transition-all ${darkMode
+                      ? 'bg-gray-700 border-gray-600 focus:border-cyan-400 focus:ring-cyan-400/20'
                       : 'border-gray-300 focus:border-cyan-500 focus:ring-cyan-500/20'
-                  }`}
+                    }`}
                   placeholder="Your message..."
                   required
                   maxLength="500"
@@ -160,11 +168,10 @@ const Contact = ({ darkMode }) => {
               <button
                 type="submit"
                 disabled={state.submitting}
-                className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
-                  state.submitting 
-                    ? 'bg-cyan-400/70 cursor-not-allowed' 
+                className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${state.submitting
+                    ? 'bg-cyan-400/70 cursor-not-allowed'
                     : 'bg-cyan-500 hover:bg-cyan-600'
-                } ${darkMode ? 'text-white' : 'text-white'}`}
+                  } ${darkMode ? 'text-white' : 'text-white'}`}
               >
                 {state.submitting ? 'Sending...' : 'Send Message'}
               </button>
@@ -173,9 +180,8 @@ const Contact = ({ darkMode }) => {
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  className={`p-4 rounded-lg mt-6 ${
-                    darkMode ? 'bg-green-900/30 text-green-400' : 'bg-green-100 text-green-800'
-                  }`}
+                  className={`p-4 rounded-lg mt-6 ${darkMode ? 'bg-green-900/30 text-green-400' : 'bg-green-100 text-green-800'
+                    }`}
                 >
                   Message sent successfully! I'll respond within 24 hours.
                 </motion.div>
@@ -185,9 +191,8 @@ const Contact = ({ darkMode }) => {
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  className={`p-4 rounded-lg mt-6 ${
-                    darkMode ? 'bg-red-900/30 text-red-400' : 'bg-red-100 text-red-800'
-                  }`}
+                  className={`p-4 rounded-lg mt-6 ${darkMode ? 'bg-red-900/30 text-red-400' : 'bg-red-100 text-red-800'
+                    }`}
                 >
                   Oops! Something went wrong. Please try again later.
                 </motion.div>

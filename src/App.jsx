@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import Blog from "./pages/Blog";
 import BlogDetails from "./components/BlogDetails";
 import Cv from "./components/Cv";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   // Load dark mode preference from localStorage
@@ -29,6 +30,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <div className={darkMode ? "dark bg-gray-900 text-white" : "bg-white text-black"}>
         <Navbar darkMode={darkMode} setDarkMode={setDarkMode} /> {/* ✅ Pass as props */}
         <Routes>
