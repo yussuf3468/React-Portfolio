@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import { projects } from "../data/blogData";
 import abdimaliPhoto from '../assets/images/abdimalikPhoto.jpg';
 import mohamedPhoto from '../assets/images/mohamedPhoto.jpg';
+import moha from '../assets/images/moha.jpg';
 
 const techStack = [
   "JavaScript",
@@ -21,14 +22,19 @@ const techStack = [
 
 const testimonials = [
   {
-    name: "Alice Johnson",
-    review: "Yussuf is an amazing developer! His attention to detail and creativity are unmatched.",
-    image: myImage,
+    name: "Ali Ahmed",
+    review: "Yussuf is a talented developer with a keen eye for design. Highly recommended!",
+    image: moha,
   },
   {
     name: "Abdimali Mohamed",
     review: "Working with Yussuf was a pleasure! His skills in React and Node.js are top-notch.",
     image: abdimaliPhoto,
+  },
+  {
+    name: "Alice Johnson",
+    review: "Yussuf is an amazing developer! His attention to detail and creativity are unmatched.",
+    image: myImage,
   },
   {
     name: "Mohamed Hassan",
@@ -98,7 +104,6 @@ const HomePage = ({ darkMode }) => {
               </Button>
             </Link>
           </div>
-
         </motion.div>
 
         <motion.div
@@ -151,7 +156,6 @@ const HomePage = ({ darkMode }) => {
         </div>
       </section>
 
-
       {/* Testimonials Section */}
       <section className="py-16 bg-gray-100 dark:bg-gray-800 text-center">
         <h2 className="text-3xl font-bold text-cyan-500 mb-6">What People Say</h2>
@@ -166,7 +170,7 @@ const HomePage = ({ darkMode }) => {
       <section className="py-16 text-center bg-gray-100 dark:bg-gray-800">
         <h2 className="text-3xl font-bold text-cyan-500 mb-6">Let's Work Together</h2>
         <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
-          Ready to collaborate on exciting projects? Let's build something amazing.
+          Ready to collaborate on exciting projects? Let's build something amazing together.
         </p>
         <div className="flex justify-center">
           <Link to="/contact">
