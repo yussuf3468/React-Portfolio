@@ -13,11 +13,11 @@ const Cv = () => {
         name: 'Yussuf Hassan Muse',
         title: 'Full-Stack Developer',
         contact: {
-            email: 'Yussufh080@gmail.com', // Replace with your email
-            phone: '+254769484646', // Replace with your phone number
-            linkedin: 'https://www.linkedin.com/in/yussuf-h-muse-a10362336/', // Replace with your LinkedIn
-            github: 'https://github.com/yussuf3468', // Replace with your GitHub
-            location: 'Nairobi, Kenya', // Replace with your location
+            email: 'Yussufh080@gmail.com',
+            phone: '+254 769 484 646',
+            linkedin: 'https://www.linkedin.com/in/yussuf-h-muse-a10362336/',
+            github: 'https://github.com/yussuf3468',
+            location: 'Nairobi, Kenya',
         },
         summary:
             'Full-stack developer with a passion for creating impactful applications. Skilled in React, Node.js, and SQL, with a strong desire to learn and master advanced technologies. Currently pursuing an Advanced Diploma in Software Engineering from Aptech Education.',
@@ -37,7 +37,12 @@ const Cv = () => {
             {
                 institution: 'Aptech Education',
                 degree: 'Advanced Diploma in Software Engineering',
-                period: '2023 - Present',
+                period: '2024 - Present',
+            },
+            {
+                institution: 'NIBS Technical College',
+                degree: 'Professional Diploma in Information Technology (Completed Two Semesters)',
+                period: '2023 - 2024',
             },
             {
                 institution: 'IGCSE',
@@ -50,6 +55,7 @@ const Cv = () => {
                 period: '2012 - 2019',
             },
         ],
+        
         skills: [
             'React',
             'Node.js',
