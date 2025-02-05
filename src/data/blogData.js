@@ -1,7 +1,7 @@
 import Odyssey from "../assets/images/OdysseyTravel (1).png";
 import tailwindcssScss from "../assets/images/tailwincssScss.png";
 import Mern from "../assets/images/Mern.png";
-import myImage from "../assets/images/myphoto1.jpg";
+import myImage from "../assets/images/myphoto2.jpg";
 import JS from "../assets/images/JS.png";
 import Vercel from "../assets/images/Vercel.png";
 import Hook from "../assets/images/hooks.png";
