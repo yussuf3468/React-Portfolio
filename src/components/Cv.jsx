@@ -14,7 +14,7 @@ const Cv = () => {
         title: 'Full-Stack Developer',
         contact: {
             email: 'Yussufh080@gmail.com',
-            phone: '+254 769 484 646',
+            phone: '+254 700 156 949',
             linkedin: 'https://www.linkedin.com/in/yussuf-h-muse-a10362336/',
             github: 'https://github.com/yussuf3468',
             location: 'Nairobi, Kenya',
