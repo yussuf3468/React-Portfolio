@@ -25,27 +25,27 @@ const techStack = [
 const testimonials = [
   {
     name: "Mohamed Hassan",
-    review: "Yussuf is a talented developer with a keen eye for design. Highly recommended!",
+    review: "Yussuf is a highly skilled developer with an exceptional eye for design. His work is always top-notch and delivered on time.",
     image: moha,
   },
   {
     name: "Abdimalik Mohamed",
-    review: "Working with Yussuf was a pleasure! His skills in React and Node.js are top-notch.",
+    review: "Collaborating with Yussuf was a fantastic experience. His expertise in React and Node.js is unparalleled.",
     image: abdimaliPhoto,
   },
   {
     name: "Chris Gachuhi",
-    review: "Yussuf is a talented developer with a keen eye for design. Highly recommended!",
+    review: "Yussuf consistently produces high-quality work with great attention to detail. Highly recommended!",
     image: Default,
   },
   {
     name: "Abdiaziz Mohamed",
-    review: "Yussuf is a dedicated developer who goes above and beyond to deliver exceptional results.",
+    review: "Yussuf is a dedicated developer who consistently goes above and beyond to deliver outstanding results.",
     image: Abdiaziz,
   },
   {
     name: "Ali Ahmed",
-    review: "Professional, efficient, and innovative. Yussuf delivers high-quality work every time.",
+    review: "Professional, efficient, and innovative. Yussuf's work is always of the highest quality.",
     image: mohamedPhoto,
   },
 ];

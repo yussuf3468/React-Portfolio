@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import { projects }  from "../data/blogData";
-
+import { projects } from "../data/blogData";
+import { Link } from "react-router-dom";
 
 const Projects = ({ darkMode }) => {
   return (
@@ -36,23 +36,25 @@ const Projects = ({ darkMode }) => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.2, duration: 0.6 }}
           >
-            <img
-              src={project.image}
-              alt={project.title}
-              className="w-full h-48 object-cover rounded-lg mb-4"
-            />
-            <h2 className="text-2xl font-semibold mb-2 text-cyan-500">
-              {project.title}
-            </h2>
-            <p className="text-sm mb-2">
-              <span className="font-bold text-purple-500">Tech Used:</span>{" "}
-              {project.tech}
-            </p>
-            <p className="text-sm mb-4">
-              <span className="font-bold text-cyan-400">Type:</span>{" "}
-              {project.type || "Project"}
-            </p>
-            <p>{project.description}</p>
+            <Link to={`/blog/${project.id}`} className="block">
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-48 object-cover rounded-lg mb-4"
+              />
+              <h2 className="text-2xl font-semibold mb-2 text-cyan-500">
+                {project.title}
+              </h2>
+              <p className="text-sm mb-2">
+                <span className="font-bold text-purple-500">Tech Used:</span>{" "}
+                {project.tech}
+              </p>
+              <p className="text-sm mb-4">
+                <span className="font-bold text-cyan-400">Type:</span>{" "}
+                {project.type || "Project"}
+              </p>
+              <p>{project.description}</p>
+            </Link>
           </motion.div>
         ))}
       </div>
